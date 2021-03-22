@@ -19,25 +19,23 @@ export default class questions extends Component {
     render() {
         return (
             <div id="quesandans">
-                <h1>Questions and Answers</h1>
-                <table>
-                    <caption>Latest Questions and Answers</caption>
-                    <thead>
-                    <tr>
-                        <th>QuestionId</th>
-                        <th>Questions</th>
-                        <th>Ask By</th>
-                        <th>Answers</th>
-                        <th>Ans By</th>
-                    </tr> 
-                    </thead>
-                    <tbody>
-                {this.state.quesandans.map(data=><tr key={data.id}><td>{data.id}</td><td>{data.ques}</td><td>{data.askby}</td><td>{data.ans}</td><td>{data.ansby}</td></tr>)}
-                    </tbody>
-                    <tfoot>
-                    <tr><td colSpan="5">The End</td></tr>
-                    </tfoot>
-                </table>
+                <div className="table">
+                    <div>
+                    <div className="d-flex flex-row justify-content-lg-around">
+                        <div>QuestionId</div>
+                        <div>Questions</div>
+                        <div>Ask By</div>
+                        <div>Answers</div>
+                        <div>Ans By</div>
+                    </div> 
+                    </div>
+                    <div className="bg-primary">
+                {this.state.quesandans.map(data=><div className="d-flex flex-row justify-content-lg-around" key={data.id}><div>{data.id}</div><div>{data.ques}</div><div>{data.askby}</div><div>{data.ans}</div><div>{data.ansby}</div></div>)}
+                    </div>
+                    <div>
+                    <div className="d-flex flex-row"><div>The End</div></div>
+                    </div>
+                </div>
             </div>
         )
     }

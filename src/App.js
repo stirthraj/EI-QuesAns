@@ -1,14 +1,13 @@
 import Head from './component/head';
 import Loginform from './component/loginform';
 import './Head.css';
-import './App.css'
 
 function App() {
   return (
     <>
-    <Head name="Header"/>
+    <Head name="EDUWHEEL INDIA"/>
     <Loginform/>
-    <Head name="Footer"/>
+    <Head name="Desgin by Tirth Raj Kumar"/>
     </>
   );
 }

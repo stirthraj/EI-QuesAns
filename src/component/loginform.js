@@ -49,41 +49,84 @@ export default class loginform extends Component {
     }
     render() {
         return (
-            <>
-            <div id="content">
-                    <div id="content-text">
-                        <div id="content-text-head">Question and Answer Platform</div>
+          <>
+            <div id="content" className="container-fluid">
+              <div className="text-center text-primary">
+                <h3>Question and Answer Platform</h3>
+              </div>
+              <div id="content-form">
+                <form onSubmit={this.onSubmitH}>
+                  <label>
+                    Question:
+                    <div>
+                      <input
+                        type="text"
+                        name="question"
+                        placeholder="Write your question"
+                        onChange={this.onChangeH}
+                        required
+                      />
                     </div>
-                    <div id="content-form">
-                        {this.state.question}
-                      <form onSubmit={this.onSubmitH}>
-                          <label>Question: 
-                          <div><input type="text" name="question" placeholder="Write your question" onChange={this.onChangeH} required/></div>
-                          </label>
-                          <label>Username: 
-                          <div><input type="text" name="username" placeholder="username" onChange={this.onChangeH} required/></div>
-                          </label>
-                          <input type="submit"/>
-                      </form>
+                  </label>
+                  <label>
+                    Username:
+                    <div>
+                      <input
+                        type="text"
+                        name="username"
+                        placeholder="username"
+                        onChange={this.onChangeH}
+                        required
+                      />
                     </div>
-                    <div id="content-form">
-                        {this.state.answer}
-                      <form onSubmit={this.onSubmitHA}>
-                          <label>QuestionId: 
-                          <div><input type="number" name="qid" placeholder="Write question id" onChange={this.onChangeHA} required/></div>
-                          </label>
-                          <label>Answer: 
-                          <div><input type="text" name="answer" placeholder="Write your answer" onChange={this.onChangeHA} required/></div>
-                          </label>
-                          <label>Username: 
-                          <div><input type="text" name="user" placeholder="username" onChange={this.onChangeHA} required/></div>
-                          </label>
-                          <input type="submit"/>
-                      </form>
+                  </label>
+                  <input type="submit" />
+                </form>
+              </div>
+              <div id="content-form">
+                <form onSubmit={this.onSubmitHA}>
+                  <label>
+                    QuestionId:
+                    <div>
+                      <input
+                        type="number"
+                        name="qid"
+                        placeholder="Write question id"
+                        onChange={this.onChangeHA}
+                        required
+                      />
                     </div>
-                </div>
-                    <Questions/>
-                </>
-        )
+                  </label>
+                  <label>
+                    Answer:
+                    <div>
+                      <input
+                        type="text"
+                        name="answer"
+                        placeholder="Write your answer"
+                        onChange={this.onChangeHA}
+                        required
+                      />
+                    </div>
+                  </label>
+                  <label>
+                    Username:
+                    <div>
+                      <input
+                        type="text"
+                        name="user"
+                        placeholder="username"
+                        onChange={this.onChangeHA}
+                        required
+                      />
+                    </div>
+                  </label>
+                  <input type="submit" />
+                </form>
+              </div>
+            </div>
+            <Questions />
+          </>
+        );
     }
 }
