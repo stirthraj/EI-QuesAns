@@ -1,38 +1,85 @@
+*,*::after,*::before{
+  box-sizing: border-box;
+  margin: 0px;
+}
 .App {
   text-align: center;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #948d8a;
+  color: rgb(241, 12, 12);
+  font-weight: bold;
+}
+#theme{
   min-height: 100vh;
+}
+#buttons{
+  /* background-image: url('./assets/wave1.svg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: bottom; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+  text-align: right;
+}
+#content{
+  /* padding-bottom: 300px; */
+  opacity: 1;
+  font-size: 1.3em;
+  border: 1px solid rgba(85, 36, 201, 0.384);
+  display: flex;
+  flex-direction: row;
+    background-image: url('./assets/wave1.svg');
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width:600px){
+  #content{
+  /* padding-bottom: 300px; */
+  font-size: 1em;
+  border: 1px solid rgba(85, 36, 201, 0.384);
+  display: flex;
+  flex-direction: column;
+}
+}
+#content>div{
+  flex: 50%;
+  min-height: 50vh;
+  padding-top: 50px;
+}
+#content-text{
+  display: flex;
+  align-items: flex-end;
+
+}
+#content-text-head{
+  line-height: 3em;
+  font-size: 1.5em;
+}
+#content-text-head::first-letter{
+  font-size: 3em;
+  font-weight: bold;
+  color:red;
+}
+#content-form{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-items: center;
+  border: 1px solid rgba(85, 36, 201, 0.384);
+  border-radius: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+table,tr,th,td{
+  border: 2px solid rgba(85, 36, 201, 0.384);
+  border-collapse: collapse;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+table{
+  width: 100%;
+}
+@media only screen and (max-width:600px){
+  
 }

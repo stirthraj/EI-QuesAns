@@ -1,0 +1,23 @@
+.head{
+    background-color: black;
+    color:white;
+    padding: 20px;
+}
+.main{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+.main-flex{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+.main-flex>div{
+    background-color: rgb(152, 119, 230);
+    flex:300px;
+    text-align: center;
+    padding: 10px;
+    margin:10px;
+}
